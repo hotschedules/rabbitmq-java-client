@@ -11,7 +11,7 @@
 //  The Original Code is RabbitMQ.
 //
 //  The Initial Developer of the Original Code is GoPivotal, Inc.
-//  Copyright (c) 2007-2015 Pivotal Software, Inc.  All rights reserved.
+//  Copyright (c) 2007-2016 Pivotal Software, Inc.  All rights reserved.
 //
 
 package com.rabbitmq.client.test.server;
@@ -21,9 +21,11 @@ import junit.framework.TestSuite;
 import com.rabbitmq.client.test.AbstractRMQTestSuite;
 
 public class ServerTests extends AbstractRMQTestSuite {
+
   public static TestSuite suite() {
         TestSuite suite = new TestSuite("server-tests");
-        if(!isUnderUmbrella()) return suite;
+        if (!requiredProperties()) return suite;
+        if (!isUnderUmbrella()) return suite;
         add(suite);
         return suite;
     }

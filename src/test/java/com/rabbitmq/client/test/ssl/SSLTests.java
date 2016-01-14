@@ -11,7 +11,7 @@
 //  The Original Code is RabbitMQ.
 //
 //  The Initial Developer of the Original Code is GoPivotal, Inc.
-//  Copyright (c) 2007-2015 Pivotal Software, Inc.  All rights reserved.
+//  Copyright (c) 2007-2016 Pivotal Software, Inc.  All rights reserved.
 //
 
 
@@ -25,7 +25,8 @@ public class SSLTests extends AbstractRMQTestSuite {
     public static TestSuite suite() {
         TestSuite suite = new TestSuite("ssl");
         //Skip the tests if not under umbrella and not SSL available
-        if(!(isUnderUmbrella() && isSSlAvailable())) return suite;
+        if (!requiredProperties()) return suite;
+        if (!(isUnderUmbrella() && isSSLAvailable())) return suite;
         suite.addTestSuite(UnverifiedConnection.class);
         suite.addTestSuite(VerifiedConnection.class);
         suite.addTestSuite(BadVerifiedConnection.class);

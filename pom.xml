@@ -2,16 +2,16 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <modelVersion>4.0.0</modelVersion>
- 
+
  <groupId>com.rabbitmq</groupId>
  <artifactId>amqp-client</artifactId>
- <version>3.6.1-SNAPSHOT</version>
+ <version>3.7.0-SNAPSHOT</version>
  <packaging>jar</packaging>
- 
+
  <name>RabbitMQ Java Client</name>
  <description>RabbitMQ Java client</description>
  <url>http://www.rabbitmq.com</url>
- 
+
  <licenses>
   <license>
    <name>ASL 2.0</name>
@@ -29,12 +29,12 @@
    <distribution>repo</distribution>
   </license>
  </licenses>
- 
+
  <scm>
   <url>https://github.com/rabbitmq/rabbitmq-java-client.git</url>
   <connection>scm:git:https://github.com/rabbitmq/rabbitmq-java-client.git</connection>
  </scm>
- 
+
  <developers>
   <developer>
    <id>rabbitmq.team</id>
@@ -44,11 +44,11 @@
    </roles>
   </developer>
  </developers>
- 
+
  <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
  </properties>
- 
+
  <dependencies>
   <dependency>
    <groupId>commons-cli</groupId>
@@ -69,7 +69,7 @@
    <scope>test</scope>
   </dependency>
  </dependencies>
- 
+
  <build>
   <plugins>
    <!-- Clean generated sources at clean phase -->
@@ -266,7 +266,7 @@
    </plugin>
   </plugins>
  </build>
- 
+
  <distributionManagement>
   <repository>
    <id>sonatype-nexus-staging</id>

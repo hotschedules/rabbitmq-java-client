@@ -11,7 +11,7 @@
 //  The Original Code is RabbitMQ.
 //
 //  The Initial Developer of the Original Code is GoPivotal, Inc.
-//  Copyright (c) 2007-2015 Pivotal Software, Inc.  All rights reserved.
+//  Copyright (c) 2007-2016 Pivotal Software, Inc.  All rights reserved.
 //
 
 
@@ -25,6 +25,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+
+import com.rabbitmq.client.impl.NetworkConnection;
 
 import com.rabbitmq.client.impl.NetworkConnection;
 
@@ -45,7 +47,7 @@ public class Host {
   }
 
 
-    private static String capture(InputStream is)
+    public static String capture(InputStream is)
         throws IOException
     {
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
@@ -124,17 +126,17 @@ public class Host {
                               " " + command);
     }
 
-    private static String makeCommand()
+    public static String makeCommand()
     {
         return System.getProperty("make.bin");
     }
 
-    private static String rabbitmqctlCommand()
+    public static String rabbitmqctlCommand()
     {
         return System.getProperty("rabbitmqctl.bin");
     }
 
-    private static String rabbitmqTestDir()
+    public static String rabbitmqTestDir()
     {
         return System.getProperty("sibling.rabbitmq_test.dir");
     }
